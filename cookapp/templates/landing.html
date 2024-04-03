@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- how to extend the navbar in this file? -->
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookApp Landing Page</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="{% static 'images/bg.mp4' %}" type="video/mp4">
+    </video>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="#" class="logo">Shik Shak Cook</a>
+  
+        <ul class="nav-links">
+          <i class="uil uil-times navCloseBtn"></i>
+          <li><a href="#">Home</a></li>
+          <li><a href="{% url 'read_recipes'%}">Read</a></li>
+          <li><a href="{% url 'publish_recipe' %}">Publish</a></li>
+          <li><a href="{% url 'cure_recipes' %}">Cures</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+  
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <div class="search-box">
+          <i class="uil uil-search search-icon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
+      </nav>
+    
+    <div class="container">
+        <div class="card">
+            <img src="{% static 'images/punjabi-recipes.jpg' %}" alt="Cuisine">
+            <div class="card-content">
+                <p class="card-text">Punjabi Style</p>
+                <a href="#" class="btn">More Recipes</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/french.jpeg' %}" alt="Cuisine">
+            <div class="card-content">
+                <p class="card-text">Punjabi Style</p>
+                <a href="#" class="btn">More Recipes</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/turkish.webp' %}" alt="Cuisine">
+            <div class="card-content">
+                <p class="card-text">Punjabi Style</p>
+                <a href="#" class="btn">More Recipes</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 CookApp</p>
+    </footer>
+<script src="{% static 'js/landing.js' %}"></script>
+
+</body>
+</html>
